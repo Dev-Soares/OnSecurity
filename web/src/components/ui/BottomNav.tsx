@@ -8,7 +8,7 @@ type NavItemProps = {
 
 const NavItem: FunctionComponent<NavItemProps> = ({ icon }) => {
   return (
-    <button className="flex items-center justify-center p-3 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200">
+    <button className="flex items-center justify-center p-3 text-blue-600 dark:text-white hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200 cursor-pointer">
       {icon}
     </button>
   )
