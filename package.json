@@ -1,0 +1,15 @@
+{
+  "name": "sem-roubo",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "server": "cd server && npm run dev ",
+    "client": "cd client && npm run dev "
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0" 
+  }
+}
