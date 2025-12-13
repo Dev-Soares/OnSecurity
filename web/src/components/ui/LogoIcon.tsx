@@ -1,5 +1,5 @@
 import React from "react"
-import logo from "/OnSecurityLight.png" // ajuste o caminho se necessário
+import logo from "/OnSecurityLight.png"
 
 type LogoIconProps = {
   size?: number | string

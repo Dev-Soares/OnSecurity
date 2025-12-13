@@ -1,15 +1,14 @@
 import type { FunctionComponent } from "react"
 import SidebarButton from "../ui/SidebarButton"
 import ProfileCard from "../ui/ProfileCard"
-import QuitButton from "../ui/QuitButton"
-import { Home, Users, FileText, User, Info } from "lucide-react"
+import { Home, Users, FileText, Info } from "lucide-react"
 import LogoIcon from "../ui/LogoIcon"
 
 const Sidebar: FunctionComponent = () => {
   return (
 
-    <aside className='h-screen w-[18%] px-5 py-10 border-r border-gray-200 dark:bg-gray-900 dark:text-white overflow-hidden self-start
-    flex justify-between flex-col'>
+    <aside className='hidden md:flex h-screen md:w-[35%] lg:w-[25%] xl:w-[18%] px-5 py-10 border-r border-gray-200 dark:bg-gray-900 dark:text-white overflow-hidden self-start
+    justify-between flex-col'>
       <div className="flex justify-start items-center">
         <LogoIcon size={80}/>
         <h1 className="text-2xl font-semibold">OnSecurity</h1>
@@ -21,8 +20,7 @@ const Sidebar: FunctionComponent = () => {
         <SidebarButton text="Sobre Nós" path="/sobre" icon={<Info className="w-8 h-8" />} />
       </div>
       <div className="flex flex-col gap-6">
-        <ProfileCard username="Bernardo"/>
-        
+        <ProfileCard username="Bernardo"/>      
       </div>
     </aside>
   )
