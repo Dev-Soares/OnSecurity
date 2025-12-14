@@ -1,5 +1,11 @@
 import React from "react"
-import logo from "/OnSecurityLight.png"
+import logoLight from "/OnSecurityLight.png"
+import logoDark from "/OnSecurityDark.png"
+
+const logo = 
+  typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? logoDark
+    : logoLight
 
 type LogoIconProps = {
   size?: number | string

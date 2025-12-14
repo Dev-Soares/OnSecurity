@@ -2,7 +2,7 @@ import React, { createContext, useState } from "react";
 import HomeContent from "../components/content/HomeContent";
 import { useEffect } from "react";
 
-export type ContentId = "home" | "community" | "articles" | "about";
+export type ContentId = "home" | "community" | "articles" | "about" | "profile";
 
 type contentContextType = {
   shownContentId: ContentId | null;
@@ -17,6 +17,7 @@ const contentMap: Record<ContentId, React.ReactNode> = {
   community: <div>Community Content</div>,
   articles: <div>Articles Content</div>,
   about: <div>About Us Content</div>,
+  profile: <div>Profile Content</div>,
 };
 
 export const ContentProvider = ({ children }: { children: React.ReactNode }) => {
