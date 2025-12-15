@@ -1,30 +1,35 @@
 import React, { useState } from 'react'
 import Input from '../ui/Input';
-import { navigateTo } from '../../utils/navigateTo';
+import { useNavigate } from 'react-router-dom';
 
 
 const LoginForm: React.FC = () => {
+
+  const navigateTo = useNavigate();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   return (
-    <form className="py-8 w-full max-w-md px-7">
+    <form className="py-8 md:py-16 lg:py-8 w-full max-w-md  px-7">
       <div className='flex flex-col gap-4 w-full'>
+        <h2 className='text-blue-600 dark:text-white self-center font-bold text-3xl hidden lg:flex xl:text-4xl mb-8'>
+          Fazer Login
+        </h2>
         <div className='flex flex-col gap-1'>
           <label htmlFor="email"
-          className='text-blue-600 font-semibold text-lg dark:text-white'>Email</label>
+            className='text-blue-600 font-semibold text-lg xl:text-xl dark:text-white'>Email</label>
           <Input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Digite seu email"
-        />
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Digite seu email"
+          />
         </div>
-        
+
         <div className='flex flex-col gap-1'>
           <label htmlFor="password"
-          className='text-blue-600 font-semibold text-lg dark:text-white'>Senha</label>
+            className='text-blue-600 font-semibold text-lg xl:text-xl dark:text-white'>Senha</label>
           <Input
             type="password"
             value={password}
@@ -35,14 +40,14 @@ const LoginForm: React.FC = () => {
           <p className='text-sm text-blue-600 cursor-pointer hover:underline self-end mt-2 font-medium dark:text-white'>Esqueceu a senha?</p>
         </div>
         <div className='flex flex-col my-4 gap-2'>
-          <button 
-            className='w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition-colors duration-300 mb-2 font-semibold cursor-pointer translate-y-[-2px]'>
+          <button
+            className='w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition-all duration-300 mb-2 font-semibold cursor-pointer hover:translate-y-[-2px] lg:text-lg'>
             Entrar
           </button>
           <p className='self-center text-lg font-semibold text-blue-600 dark:text-white'>Ou</p>
-          <button
+          <button 
             onClick={() => navigateTo('/signup')}
-            className='w-full border-2 border-blue-600 text-blue-600 py-3 rounded-md hover:bg-blue-700 hover:text-white transition-colors duration-300 mt-2 font-semibold dark:text-white dark:border-white dark:hover:border-blue-600 cursor-pointer translate-y-[-2px]'>
+            className='w-full border-2 border-blue-600 text-blue-600 py-3 rounded-md hover:bg-blue-700 hover:text-white transition-all duration-300 mt-2 font-semibold dark:text-white dark:border-white dark:hover:border-blue-600 cursor-pointer hover:translate-y-[-2px] lg:text-lg'>
             Criar Conta
           </button>
         </div>

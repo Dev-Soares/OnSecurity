@@ -1,11 +1,13 @@
 import type { FunctionComponent } from "react"
-import { navigateTo } from "../../utils/navigateTo"
+import { useNavigate } from "react-router-dom"
 import SidebarButton from "../ui/SidebarButton"
 import ProfileCard from "../ui/ProfileCard"
 import { Home, Users, FileText, Info, LogIn } from "lucide-react"
 import LogoIcon from "../ui/LogoIcon"
 
 const Sidebar: FunctionComponent = () => {
+
+  const navigateTo = useNavigate();
 
   return (
 
@@ -22,8 +24,8 @@ const Sidebar: FunctionComponent = () => {
         <SidebarButton text="Sobre Nós" id="about" icon={<Info className="w-8 h-8" />} />        
       </div>
       <div className="flex flex-col gap-6">
-        <button onClick={navigateTo('/login')}
-        className="flex justify-start items-center gap-3 w-full p-3 text-white bg-blue-600 border-blue-600 border-2 hover:bg-gray-200 hover:text-blue-600 hover:dark:bg-gray-800 hover:-translate-y-0.5 transition-all duration-300 rounded-md text-xl! font-medium cursor-pointer ">
+        <button onClick={() => navigateTo('/login')}
+        className="flex justify-start items-center gap-3 w-full p-3 text-white bg-blue-600 border-blue-600 border-2 hover:bg-gray-200 hover:text-blue-600 hover:dark:bg-gray-800 hover:translate-y-[-2px] transition-all duration-300 rounded-md text-xl! font-medium cursor-pointer ">
           <LogIn className="w-8 h-8" />
           <p>Fazer Login</p>
         </button>
