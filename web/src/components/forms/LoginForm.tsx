@@ -11,9 +11,9 @@ const LoginForm: React.FC = () => {
   const [password, setPassword] = useState('');
 
   return (
-    <form className="py-8 md:py-16 lg:py-8 w-full max-w-md  px-7">
+    <form className="py-8 md:py-16 lg:p-0 lg:h-full w-full max-w-md  px-7 lg:flex lg:justify-center lg:items-center lg:w-[80%]">
       <div className='flex flex-col gap-4 w-full'>
-        <h2 className='text-blue-600 dark:text-white self-center font-bold text-3xl hidden lg:flex xl:text-4xl mb-8'>
+        <h2 className='text-blue-600 dark:text-white self-center font-bold text-4xl hidden lg:flex xl:text-5xl mb-16'>
           Fazer Login
         </h2>
         <div className='flex flex-col gap-1'>
