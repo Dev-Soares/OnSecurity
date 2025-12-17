@@ -14,7 +14,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
         <img src={avatarUrl} alt={`${username}'s avatar`} className='w-15 h-15 rounded-full border-2 border-gray-300 dark:border-gray-700' />
         <div className='mt-2 flex flex-col'>
             <p className='font-semibold text-lg'>{username}</p>
-            <a href="/perfil" className='text-md text-blue-600 dark:text-blue-400 hover:underline'>Ver Perfil</a>
+            <a href="/perfil" className='text-md text-blue-500 dark:text-blue-400 hover:underline'>Ver Perfil</a>
         </div>     
     </div>
   )

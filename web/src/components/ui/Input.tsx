@@ -30,7 +30,7 @@ const Input: React.FC<InputProps> = ({ value, onChange, placeholder, type = "tex
         onClick={() => setShowPassword((prev) => !prev)}
         tabIndex={-1}
         >
-            {showPassword ? <EyeOff className="w-6 h-6 text-blue-600 dark:text-white" /> : <Eye className="w-6 h-6 text-blue-600 dark:text-white cursor-pointer" />}
+            {showPassword ? <EyeOff className="w-6 h-6 text-blue-500 dark:text-white" /> : <Eye className="w-6 h-6 text-blue-500 dark:text-white cursor-pointer" />}
         </button>
         )
      }

@@ -12,7 +12,7 @@ const LoginPage: React.FC = () => {
 
   return (
 
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-gray-100 dark:bg-gray-800 ">
       <div className='bg-linear-to-r from-blue-700 to-blue-900  flex flex-col lg:flex-row h-full'>
         <div className=' lg:h-full lg:w-[50%] w-full p-1 flex flex-col lg:mt-4'>  
           <button onClick={() => navigate(-1)}
@@ -23,11 +23,11 @@ const LoginPage: React.FC = () => {
           <div className='flex flex-col lg:justify-center lg:items-center gap-2'>
             <div className='w-full h-auto text-white flex flex-row items-center justify-center my-3 lg:hidden'>
               <LogoIcon color='light' size={80} />
-              <h2 className='font-semibold text-3xl'>OnSecurity</h2>
+              <h2 className='font-semibold text-3xl'>SecurityOn</h2>
             </div>
             <div className='w-full h-auto text-white hidden lg:flex flex-row items-center justify-center my-3 '>
               <LogoIcon color='light' size={140} />
-              <h2 className='font-semibold text-4xl text-white'>OnSecurity</h2>
+              <h2 className='font-semibold text-4xl text-white'>SecurityOn</h2>
             </div>
             <div className='w-full h-auto text-white flex flex-row items-center justify-center lg:hidden my-3'>
               <h1 className='text-4xl font-bold text-white z-10 flex justify-center items-center m-8 w-[70%] '>

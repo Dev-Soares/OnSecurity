@@ -1,8 +1,12 @@
 import React, { createContext, useState } from "react";
-import HomeContent from "../components/content/HomeContent";
+import ArticleContent from "../components/content/ArticleContent";
+import CommunityContent from "../components/content/CommunityContent";
+import AboutContent from "../components/content/AboutContent";
+import ProfileContent from "../components/content/ProfileContent";
+import ComplaintContent from "../components/content/ComplaintContent";
 import { useEffect } from "react";
 
-export type ContentId = "home" | "community" | "articles" | "about" | "profile";
+export type ContentId =  "community" | "articles" | "about" | "profile" | "complaint";
 
 type contentContextType = {
   shownContentId: ContentId | null;
@@ -13,20 +17,20 @@ type contentContextType = {
 const ContentContext = createContext<contentContextType | null>(null);
 
 const contentMap: Record<ContentId, React.ReactNode> = {
-  home: <HomeContent />,
-  community: <div>Community Content</div>,
-  articles: <div>Articles Content</div>,
-  about: <div>About Us Content</div>,
-  profile: <div>Profile Content</div>,
+  community: <CommunityContent />,
+  articles: <ArticleContent />,
+  about: <AboutContent />,
+  profile: <ProfileContent />,
+  complaint: <ComplaintContent />,
 };
 
 export const ContentProvider = ({ children }: { children: React.ReactNode }) => {
 
-  const [shownContentId, setShownContentId] = useState<ContentId | null>("home");
-  const [shownContent, setShownContent] = useState<React.ReactNode>(contentMap["home"]);
+  const [shownContentId, setShownContentId] = useState<ContentId | null>("community");
+  const [shownContent, setShownContent] = useState<React.ReactNode>(contentMap["community"]);
 
   useEffect(()=> {
-     setShownContent(contentMap[shownContentId || "home"]);
+     setShownContent(contentMap[shownContentId || "community"]);
   }, [shownContentId]);
     
 
