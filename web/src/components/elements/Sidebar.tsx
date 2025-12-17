@@ -29,7 +29,7 @@ const Sidebar: FunctionComponent = () => {
       <ToggleTheme />
       <div className="flex flex-col gap-6">
         <button onClick={() => navigateTo('/login')}
-        className="flex justify-start items-center gap-3 w-[45%] p-3 text-white bg-blue-500 border-blue-500 border-2 hover:bg-gray-200 hover:text-blue-500 hover:dark:bg-gray-800 hover:translate-y-[-2px] transition-all duration-300 rounded-md text-xl! font-medium cursor-pointer ">
+        className="flex justify-start items-center gap-3 w-[70%] xl:w-[60%] 2xl:w-[45%]  p-3 text-white bg-blue-500 border-blue-500 border-2 hover:bg-gray-200 hover:text-blue-500 hover:dark:bg-gray-800 hover:translate-y-[-2px] transition-all duration-300 rounded-md text-xl! font-medium cursor-pointer ">
           <LogIn className="w-8 h-8" />
           <p>Fazer Login</p>
         </button>
