@@ -12,7 +12,7 @@ const SearchBar: React.FC = () => {
       <input 
         type="text" 
         placeholder="Search..." 
-        className='w-full h-full bg-transparent outline-none text-gray-950 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400'
+        className='w-full h-full bg-transparent outline-none font-medium text-gray-950 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400'
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         onFocus={() => setIsFocused(true)}

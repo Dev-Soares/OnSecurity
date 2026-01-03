@@ -7,6 +7,7 @@ import ArticleContent from './components/content/ArticleContent'
 import ComplaintContent from './components/content/ComplaintContent'
 import AboutContent from './components/content/AboutContent'
 import ProfileContent from './components/content/ProfileContent'
+import DetailedArticleContent from './components/content/DetailedArticleContent'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             <Route path="complaint" element={<ComplaintContent />} />
             <Route path="about" element={<AboutContent />} />
             <Route path="profile" element={<ProfileContent />} />
+            <Route path="articles/:title" element={<DetailedArticleContent />} />
         </Route>
 
         <Route path="/login" element={ <LoginPage />} />

@@ -13,7 +13,7 @@ const Sidebar: FunctionComponent = () => {
 
   return (
 
-    <aside className='hidden lg:flex sticky top-0  overflow-none h-screen lg:w-[40%] xl:w-[32%] px-5 py-10   bg-white text-blue-500 dark:bg-gray-950 dark:text-white dark:border-gray-900 border-r border-gray-200  overflow-hidden self-start
+    <aside className='hidden lg:flex sticky top-0  overflow-none h-screen lg:w-[40%] xl:w-[32%] px-8 py-10   bg-white text-blue-500 dark:bg-gray-950 dark:text-white dark:border-gray-900 border-r border-gray-200  overflow-hidden self-start
     justify-between flex-col'>
       <div className="flex justify-start items-center">
         <LogoIcon size={80}/>
