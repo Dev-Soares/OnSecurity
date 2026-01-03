@@ -3,7 +3,7 @@ import Content from "../components/elements/Content.tsx"
 
 const MainPage = () => {
   return (
-    <main className="flex min-h-screen w-full flex-row items-center justify-between ">
+    <main className="flex min-h-screen w-full flex-row items-center justify-between 2xl:px-32 bg-white dark:bg-gray-950">
         <Sidebar />
         <Content />
     </main>

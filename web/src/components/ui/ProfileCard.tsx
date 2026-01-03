@@ -13,7 +13,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   const navigate = useNavigate();
 
   return (
-    <div className='flex gap-2 justify-start items-center p-2 border-t border-blue-500 dark:border-gray-700 w-full pt-4'>
+    <div className='flex gap-2 justify-start items-center p-2  w-full pt-4'>
       <button onClick={() => navigate('/profile')} className='hover:scale-105 transition-transform duration-300 cursor-pointer'>
         <img src={avatarUrl} alt={`${username}'s avatar`} className='w-15 h-15 rounded-full border-2 border-gray-300 dark:border-gray-700' />
       </button>

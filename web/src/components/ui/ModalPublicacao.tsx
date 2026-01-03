@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ImagePlus } from 'lucide-react';
+import { X, Image } from '@phosphor-icons/react';
 
 type ModalPublicacaoProps = {
     isOpen: boolean;
@@ -28,12 +28,12 @@ const ModalPublicacao: React.FC<ModalPublicacaoProps> = ({ isOpen, onClose, imgU
                 onClick={onClose}
             />
 
-            <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-lg w-full mx-4 p-6 z-10">
+            <div className="relative bg-white dark:bg-gray-900 rounded-lg shadow-xl max-w-lg w-full mx-4 p-6 z-10">
 
                 <div className="flex justify-between items-center mb-4">
                     <div className='w-full flex items-center gap-4'>
                         <img src={imgUrl || 'avatar.png'} alt="User avatar" className='rounded-full w-12 h-12 object-cover border-gray-300 border-2' />
-                        <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                        <h2 className="text-xl font-bold text-gray-950 dark:text-white">
                             Criar Publicação
                         </h2>
 
@@ -44,7 +44,7 @@ const ModalPublicacao: React.FC<ModalPublicacaoProps> = ({ isOpen, onClose, imgU
                         onClick={onClose}
                         className="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors cursor-pointer"
                     >
-                        <X className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+                        <X size={24} weight="regular" className="text-gray-600 dark:text-gray-300" />
                     </button>
                 </div>
 
@@ -55,7 +55,7 @@ const ModalPublicacao: React.FC<ModalPublicacaoProps> = ({ isOpen, onClose, imgU
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
                         placeholder="O que você está pensando?"
-                        className="w-full min-h-32 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white border-2 border-gray-300 dark:border-gray-600 focus:outline-none focus:border-blue-500 resize-none"
+                        className="w-full min-h-32 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-950 dark:text-white border-2 border-gray-300 dark:border-gray-600 focus:outline-none focus:border-blue-500 resize-none"
                     />
 
                     {image && (
@@ -65,13 +65,13 @@ const ModalPublicacao: React.FC<ModalPublicacaoProps> = ({ isOpen, onClose, imgU
                                 onClick={() => setImage(null)}
                                 className="absolute top-2 right-2 p-1 bg-red-500 rounded-full hover:bg-red-600"
                             >
-                                <X className="w-4 h-4 text-white" />
+                                <X size={16} weight="regular" className="text-white" />
                             </button>
                         </div>
                     )}
                     <div className="flex justify-between items-center pt-4 border-t border-gray-200 dark:border-gray-700">
                         <label className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 hover:translate-y-[-2px] cursor-pointer">
-                            <ImagePlus className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                            <Image size={20} weight="regular" className="text-blue-600 dark:text-blue-400" />
                             <span className="text-gray-700 dark:text-gray-200">Adicionar Imagem</span>
                             <input
                                 type="file"

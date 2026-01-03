@@ -20,3 +20,9 @@ body {
   position: relative;
   min-height: 100vh;
 }
+
+@layer utilities {
+  .font-custom {
+    font-weight: 650;
+  }
+}

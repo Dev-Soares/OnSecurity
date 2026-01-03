@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import Post from '../ui/Post'
-import { ImagePlus } from 'lucide-react'
+import { Image } from '@phosphor-icons/react'
 import ModalPublicacao from '../ui/ModalPublicacao'
 
 const CommunityContent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <main className='py-3 px-2 min-h-screen pb-28 md:pb-16 lg:pb-0 lg:py-8 lg:px-8 flex flex-col gap-6 bg-white dark:bg-gray-900'>
+    <main className='py-3 px-2 min-h-screen pb-28 md:pb-16 lg:pb-0 lg:py-8 lg:px-8 flex flex-col gap-6 bg-white dark:bg-gray-950'>
         
-      <div className='bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 shadow-xl border border-gray-300 dark:border-gray-700 w-full md:w-[70%] xl:w-[50%] mx-auto'>
+      <div className='bg-gray-100 dark:bg-gray-900 rounded-2xl p-4 shadow-xl border border-gray-300 dark:border-gray-700 w-full md:w-[70%] xl:w-[50%] mx-auto'>
         <div className='flex flex-row items-center gap-3'>
           <button 
             onClick={() => setIsModalOpen(true)} 
@@ -18,7 +18,7 @@ const CommunityContent: React.FC = () => {
             <input 
               type="text" 
               readOnly 
-              className='w-full h-12 bg-white dark:bg-gray-700 rounded-3xl px-4 text-gray-900 dark:text-white border-2 border-gray-300 dark:border-gray-600 pointer-events-none cursor-pointer transition-all duration-300' 
+              className='w-full h-12 bg-white dark:bg-gray-700 rounded-3xl px-4 text-gray-950 dark:text-white border-2 border-gray-300 dark:border-gray-600 pointer-events-none cursor-pointer transition-all duration-300' 
               placeholder="O que você está pensando?" 
             />
           </button>
@@ -26,7 +26,7 @@ const CommunityContent: React.FC = () => {
             onClick={() => setIsModalOpen(true)}
             className='p-3 cursor-pointer rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition-all duration-200 bg-blue-500 dark:bg-blue-600 hover:scale-110 shadow-md'
           >
-            <ImagePlus className='w-6 h-6 text-white' />
+            <Image size={24} weight="regular" className='text-white' />
           </button>     
         </div>
       </div>

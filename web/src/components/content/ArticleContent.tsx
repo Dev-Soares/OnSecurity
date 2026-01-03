@@ -8,26 +8,49 @@ const ArticleContent: React.FC = () => {
       <div className='p-2 flex justify-center items-center'>
         <SearchBar />
       </div>
-      <div className='p-2 px-4 flex flex-wrap gap-8 justify-center items-center mt-3'>
-        <ArticleCard 
-          title="Sample Article Title"
-          description="This is a sample article content to demonstrate the ArticleCard component." 
-          bgUrl='teste.jpeg'
-          id="teste" 
-        />
-        <ArticleCard 
-          title="Sample Article Title"
-          description="This is a sample article content to demonstrate the ArticleCard component." 
-          bgUrl={false} 
-          id="teste"
-        />
-        <ArticleCard 
-          title="Sample Article Title"
-          description="This is a sample article content to demonstrate the ArticleCard component." 
-          bgUrl={false}
-          id="teste"
-        />
+      <div className='flex justify-center w-full'>
+        <div className=' p-2 px-4 xl:px-5 flex flex-wrap gap-8 justify-start md:justify-center xl:justify-start max-w-[970px] items-center mt-3'>
+          <ArticleCard
+            title="Sample Article Title"
+            description="This is a sample article content to demonstrate the ArticleCard component."
+            bgUrl='teste.jpeg'
+            id="teste"
+          />
+          <ArticleCard
+            title="Sample Article Title"
+            description="This is a sample article content to demonstrate the ArticleCard component."
+            bgUrl={false}
+            id="teste"
+          />
+          <ArticleCard
+            title="Sample Article Title"
+            description="This is a sample article content to demonstrate the ArticleCard component."
+            bgUrl={false}
+            id="teste"
+          />
+          <ArticleCard
+            title="Sample Article Title"
+            description="This is a sample article content to demonstrate the ArticleCard component."
+            bgUrl='teste.jpeg'
+            id="teste"
+          />
+          <ArticleCard
+            title="Sample Article Title"
+            description="This is a sample article content to demonstrate the ArticleCard component."
+            bgUrl='teste.jpeg'
+            id="teste"
+          />
+          <ArticleCard
+            title="Sample Article Title"
+            description="This is a sample article content to demonstrate the ArticleCard component."
+            bgUrl={false}
+            id="teste"
+          />
+
+        </div>
+
       </div>
+
     </main>
   )
 }

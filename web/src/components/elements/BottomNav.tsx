@@ -1,5 +1,5 @@
 import type { FunctionComponent } from "react"
-import { Users, FileText, Info, Flag, User } from "lucide-react"
+import { Users, FileText, Info, Flag } from "@phosphor-icons/react"
 import { useNavigate, useLocation } from "react-router-dom"
 
 type NavItemProps = {
@@ -40,33 +40,33 @@ const iconClass = "w-7 h-7 transition-colors duration-300";
 const BottomNav: FunctionComponent = () => {
   return (
     <nav
-      className="lg:hidden fixed left-0 right-0 bottom-0 z-50 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 flex justify-around items-center py-3"
+      className="lg:hidden fixed left-0 right-0 bottom-0 z-50 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-700 flex justify-around items-center py-3"
       style={{ margin: 0, paddingBottom: 'calc(12px + env(safe-area-inset-bottom))' }}
     >
       <NavItem
         icon={active => (
-          <Users className={`${iconClass} ${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
+          <Users size={28} weight={active ? "fill" : "regular"} className={`${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
         )}
         route="/community"
         label="Comunidade"
       />
       <NavItem
         icon={active => (
-          <FileText className={`${iconClass} ${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
+          <FileText size={28} weight={active ? "fill" : "regular"} className={`${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
         )}
         route="/articles"
         label="Artigos"
       />
       <NavItem
         icon={active => (
-          <Flag className={`${iconClass} ${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
+          <Flag size={28} weight={active ? "fill" : "regular"} className={`${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
         )}
         route="/complaint"
         label="Denúncias"
       />
       <NavItem
         icon={active => (
-          <Info className={`${iconClass} ${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
+          <Info size={28} weight={active ? "fill" : "regular"} className={`${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
         )}
         route="/about"
         label="Sobre "
