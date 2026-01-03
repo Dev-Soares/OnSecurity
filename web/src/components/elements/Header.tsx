@@ -1,6 +1,6 @@
 import React from 'react'
 import { Bell } from 'lucide-react'
-import { useContent } from '../../contexts/contentContext'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 type headerProps = {
     userImg: string | null;
@@ -8,13 +8,17 @@ type headerProps = {
 
 const Header: React.FC<headerProps> = ({ userImg }) => {
 
-    const { setShownContentId, shownContentId } = useContent();
+    
+
+  const navigate = useNavigate();
+  
     const imgURL = userImg ? userImg : "avatar.png";
+    const location = useLocation();
 
   return (
     <header className='flex lg:hidden p-3 px-5 w-full justify-between items-center gap-4 border-b border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900'>
-      <button onClick={() => setShownContentId('profile')}
-      className={`w-full h-full justify-center items-center ${shownContentId === 'profile' ? 'hidden' : ''}`}>
+      <button onClick={() => navigate('profile')}
+      className={`w-full h-full justify-center items-center ${location.pathname === '/profile' ? 'hidden' : ''}`}>
         <img src={imgURL} alt="User avatar" className='rounded-full w-12 h-12 object-cover border-gray-300 border-2' />
       </button>
               

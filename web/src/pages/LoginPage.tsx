@@ -15,7 +15,7 @@ const LoginPage: React.FC = () => {
     <main className="min-h-screen bg-gray-100 dark:bg-gray-800 ">
       <div className='bg-linear-to-r from-blue-700 to-blue-900  flex flex-col lg:flex-row h-full'>
         <div className=' lg:h-full lg:w-[50%] w-full p-1 flex flex-col lg:mt-4'>  
-          <button onClick={() => navigate(-1)}
+          <button onClick={() => navigate('/')}
             className='flex flex-row text-white justify-start items-center m-1 my-4 cursor-pointer z-50 w-fit lg:hidden'>
             <ChevronLeft className="w-10 lg:w-16 h-10 lg:h-16 text-white cursor-pointer" />
             <p className='text-xl lg:text-2xl font-medium'>Voltar</p>

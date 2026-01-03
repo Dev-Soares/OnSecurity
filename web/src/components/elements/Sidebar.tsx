@@ -1,5 +1,5 @@
 import type { FunctionComponent } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom"
 import SidebarButton from "../ui/SidebarButton"
 import ProfileCard from "../ui/ProfileCard"
 import { Users, FileText, Info, LogIn, Flag, Bell } from "lucide-react"
@@ -9,6 +9,7 @@ import ToggleTheme from "../ui/ToggleTheme"
 const Sidebar: FunctionComponent = () => {
 
   const navigateTo = useNavigate();
+  const location = useLocation();
 
   return (
 
@@ -19,11 +20,11 @@ const Sidebar: FunctionComponent = () => {
         <h1 className="text-2xl font-semibold">SecurityOn</h1>
       </div>
       <div className="flex flex-col justify-start items-start  gap-4">
-        <SidebarButton text="Comunidade" id="community" icon={<Users className="w-8 h-8" />} />
-        <SidebarButton text="Artigos" id="articles" icon={<FileText className="w-8 h-8" />} />
-        <SidebarButton text="Denúncias" id="complaint" icon={<Flag className="w-8 h-8" />} />
-        <SidebarButton text="Notificações" id="complaint" icon={<Bell className="w-8 h-8" />} />
-        <SidebarButton text="Sobre Nós" id="about" icon={<Info className="w-8 h-8" />} />
+        <SidebarButton text="Comunidade" route="/community" icon={<Users className="w-8 h-8" />} isSelected={location.pathname === '/community'} />
+        <SidebarButton text="Artigos" route="/articles" icon={<FileText className="w-8 h-8" />} isSelected={location.pathname === '/articles'} />
+        <SidebarButton text="Denúncias" route="/complaint" icon={<Flag className="w-8 h-8" />} isSelected={location.pathname === '/complaint'} />
+        <SidebarButton text="Notificações" route="/notifications" icon={<Bell className="w-8 h-8" />} isSelected={location.pathname === '/notifications'} />
+        <SidebarButton text="Sobre Nós" route="/about" icon={<Info className="w-8 h-8" />} isSelected={location.pathname === '/about'} />
                 
       </div>
       <ToggleTheme />
