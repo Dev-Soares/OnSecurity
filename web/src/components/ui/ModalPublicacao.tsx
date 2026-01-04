@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Image } from '@phosphor-icons/react';
+import { XIcon, ImageIcon } from '@phosphor-icons/react';
 
 type ModalPublicacaoProps = {
     isOpen: boolean;
@@ -44,7 +44,7 @@ const ModalPublicacao: React.FC<ModalPublicacaoProps> = ({ isOpen, onClose, imgU
                         onClick={onClose}
                         className="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors cursor-pointer"
                     >
-                        <X size={24} weight="regular" className="text-gray-600 dark:text-gray-300" />
+                        <XIcon size={24} weight="regular" className="text-gray-600 dark:text-gray-300" />
                     </button>
                 </div>
 
@@ -65,13 +65,13 @@ const ModalPublicacao: React.FC<ModalPublicacaoProps> = ({ isOpen, onClose, imgU
                                 onClick={() => setImage(null)}
                                 className="absolute top-2 right-2 p-1 bg-red-500 rounded-full hover:bg-red-600"
                             >
-                                <X size={16} weight="regular" className="text-white" />
+                                <XIcon size={16} weight="regular" className="text-white" />
                             </button>
                         </div>
                     )}
                     <div className="flex justify-between items-center pt-4 border-t border-gray-200 dark:border-gray-700">
                         <label className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 hover:translate-y-[-2px] cursor-pointer">
-                            <Image size={20} weight="regular" className="text-blue-600 dark:text-blue-400" />
+                            <ImageIcon size={20} weight="regular" className="text-blue-600 dark:text-blue-400" />
                             <span className="text-gray-700 dark:text-gray-200">Adicionar Imagem</span>
                             <input
                                 type="file"

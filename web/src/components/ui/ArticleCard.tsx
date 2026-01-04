@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight } from '@phosphor-icons/react'
+import { ArrowRightIcon } from '@phosphor-icons/react'
 import { useNavigate } from 'react-router-dom'
 
 interface ArticleCardProps {
@@ -38,7 +38,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ title, description, id, bgUrl
                 <p>
                     Read Article
                 </p>
-                <ArrowRight size={20} weight="regular" className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRightIcon size={20} weight="regular" className="group-hover:translate-x-1 transition-transform" />
 
             </div>
         </button>

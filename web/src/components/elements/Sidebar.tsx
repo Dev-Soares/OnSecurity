@@ -2,7 +2,7 @@ import type { FunctionComponent } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import SidebarButton from "../ui/SidebarButton"
 import ProfileCard from "../ui/ProfileCard"
-import { Users, FileText, Info, SignIn, Flag } from "@phosphor-icons/react"
+import { UsersIcon, FileTextIcon, InfoIcon, SignInIcon, FlagIcon } from "@phosphor-icons/react"
 import LogoIcon from "../ui/LogoIcon"
 import ToggleTheme from "../ui/ToggleTheme"
 
@@ -20,17 +20,17 @@ const Sidebar: FunctionComponent = () => {
         <h1 className="text-2xl font-medium">SecurityOn</h1>
       </div>
       <div className="flex flex-col justify-start items-start  gap-4">
-        <SidebarButton text="Comunidade" route="/community" iconOutline={<Users size={32} weight="regular" />} iconFilled={<Users size={32} weight="fill" />} isSelected={location.pathname === '/community'} />
-        <SidebarButton text="Artigos" route="/articles" iconOutline={<FileText size={32} weight="regular" />} iconFilled={<FileText size={32} weight="fill" />} isSelected={location.pathname === '/articles'} />
-        <SidebarButton text="Denúncias" route="/complaint" iconOutline={<Flag size={32} weight="regular" />} iconFilled={<Flag size={32} weight="fill" />} isSelected={location.pathname === '/complaint'} />
-        <SidebarButton text="Sobre Nós" route="/about" iconOutline={<Info size={32} weight="regular" />} iconFilled={<Info size={32} weight="fill" />} isSelected={location.pathname === '/about'} />
+        <SidebarButton text="Comunidade" route="/community" iconOutline={<UsersIcon size={32} weight="regular" />} iconFilled={<UsersIcon size={32} weight="fill" />} isSelected={location.pathname === '/community'} />
+        <SidebarButton text="Artigos" route="/articles" iconOutline={<FileTextIcon size={32} weight="regular" />} iconFilled={<FileTextIcon size={32} weight="fill" />} isSelected={location.pathname === '/articles'} />
+        <SidebarButton text="Denúncias" route="/complaint" iconOutline={<FlagIcon size={32} weight="regular" />} iconFilled={<FlagIcon size={32} weight="fill" />} isSelected={location.pathname === '/complaint'} />
+        <SidebarButton text="Sobre Nós" route="/about" iconOutline={<InfoIcon size={32} weight="regular" />} iconFilled={<InfoIcon size={32} weight="fill" />} isSelected={location.pathname === '/about'} />
                 
       </div>
       <ToggleTheme />
       <div className="flex flex-col gap-6 justify-center items-center w-full">
         <button onClick={() => navigateTo('/login')}
-        className="flex justify-center items-center gap-3 w-full font-semibold  p-3 text-white bg-blue-500 border-blue-500 border-2 hover:bg-gray-200 hover:text-blue-500 hover:dark:bg-gray-900 hover:translate-y-[-2px] transition-all duration-300 rounded-4xl text-xl! font-normal cursor-pointer ">
-          <SignIn size={32} weight="regular" />
+        className="flex justify-center items-center gap-3 w-full font-semibold  p-3 text-white bg-blue-500 border-blue-500 border-2 hover:bg-white hover:text-blue-500 hover:dark:bg-gray-900 hover:translate-y-[-2px] transition-all duration-300 rounded-4xl text-xl! font-normal cursor-pointer ">
+          <SignInIcon size={32} weight="regular" />
           <p>Fazer Login</p>
         </button>
         <ProfileCard />      

@@ -1,5 +1,5 @@
 import type { FunctionComponent } from "react"
-import { Users, FileText, Info, Flag } from "@phosphor-icons/react"
+import { UsersIcon, FileTextIcon, InfoIcon, FlagIcon } from "@phosphor-icons/react"
 import { useNavigate, useLocation } from "react-router-dom"
 
 type NavItemProps = {
@@ -45,28 +45,28 @@ const BottomNav: FunctionComponent = () => {
     >
       <NavItem
         icon={active => (
-          <Users size={28} weight={active ? "fill" : "regular"} className={`${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
+          <UsersIcon size={28} weight={active ? "fill" : "regular"} className={`${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
         )}
         route="/community"
         label="Comunidade"
       />
       <NavItem
         icon={active => (
-          <FileText size={28} weight={active ? "fill" : "regular"} className={`${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
+          <FileTextIcon size={28} weight={active ? "fill" : "regular"} className={`${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
         )}
         route="/articles"
         label="Artigos"
       />
       <NavItem
         icon={active => (
-          <Flag size={28} weight={active ? "fill" : "regular"} className={`${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
+          <FlagIcon size={28} weight={active ? "fill" : "regular"} className={`${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
         )}
         route="/complaint"
         label="Denúncias"
       />
       <NavItem
         icon={active => (
-          <Info size={28} weight={active ? "fill" : "regular"} className={`${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
+          <InfoIcon size={28} weight={active ? "fill" : "regular"} className={`${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
         )}
         route="/about"
         label="Sobre "

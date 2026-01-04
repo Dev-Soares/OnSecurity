@@ -1,5 +1,5 @@
 import React from 'react'
-import { CaretLeft } from "@phosphor-icons/react"
+import { CaretLeftIcon } from "@phosphor-icons/react"
 import { useNavigate } from 'react-router-dom'
 import LogoIcon from './LogoIcon'
 
@@ -63,7 +63,7 @@ const Waves: React.FC<WavesProps> = ({ title }) => {
         onClick={() => navigate('/')}
         className='flex flex-row text-white justify-start items-center m-1 my-4 cursor-pointer z-50 w-fit lg:hidden hover:opacity-80 transition-opacity'
       >
-        <CaretLeft size={40} weight="bold" className="text-white cursor-pointer" />
+        <CaretLeftIcon size={40} weight="bold" className="text-white cursor-pointer" />
         <p className='text-xl lg:text-2xl font-medium'>Voltar</p>
       </button>
 

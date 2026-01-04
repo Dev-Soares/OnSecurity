@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Post from '../ui/Post'
-import { Image } from '@phosphor-icons/react'
+import { ImageIcon } from '@phosphor-icons/react'
 import ModalPublicacao from '../ui/ModalPublicacao'
 
 const CommunityContent: React.FC = () => {
@@ -26,7 +26,7 @@ const CommunityContent: React.FC = () => {
             onClick={() => setIsModalOpen(true)}
             className='p-3 cursor-pointer rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition-all duration-200 bg-blue-500 dark:bg-blue-600 hover:scale-110 shadow-md'
           >
-            <Image size={24} weight="regular" className='text-white' />
+            <ImageIcon size={24} weight="regular" className='text-white' />
           </button>     
         </div>
       </div>

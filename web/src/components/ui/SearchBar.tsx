@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { MagnifyingGlass } from '@phosphor-icons/react'
+import { MagnifyingGlassIcon } from '@phosphor-icons/react'
 
 const SearchBar: React.FC = () => {
 
@@ -18,7 +18,7 @@ const SearchBar: React.FC = () => {
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
       />
-      <MagnifyingGlass size={32} weight="regular" className={`transition-colors duration-300 ${isFocused ? 'text-blue-500' : 'text-gray-500 dark:text-gray-400'}`} />
+      <MagnifyingGlassIcon size={32} weight="regular" className={`transition-colors duration-300 ${isFocused ? 'text-blue-500' : 'text-gray-500 dark:text-gray-400'}`} />
     </div>
   )
 }

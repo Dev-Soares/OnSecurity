@@ -1,5 +1,5 @@
 import React from 'react'
-import { Bell } from '@phosphor-icons/react'
+import { BellIcon } from '@phosphor-icons/react'
 import { useNavigate, useLocation } from 'react-router-dom'
 
 type headerProps = {
@@ -23,7 +23,7 @@ const Header: React.FC<headerProps> = ({ userImg }) => {
       </button>
               
         <button className='relative p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors duration-200 ml-auto cursor-pointer'>
-            <Bell size={32} weight="regular" className='text-gray-700 dark:text-gray-200' />
+            <BellIcon size={32} weight="regular" className='text-gray-700 dark:text-gray-200' />
         </button>
     </header>
   )

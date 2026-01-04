@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heart, ChatCircle, ShareNetwork } from '@phosphor-icons/react'
+import { HeartIcon, ChatCircleIcon, ShareNetworkIcon } from '@phosphor-icons/react'
 
 
 type PostProps = {
@@ -27,13 +27,13 @@ const Post: React.FC<PostProps> = ({ username, content, timestamp, userAvatarUrl
         </div>
         <div className='flex flex-row gap-2 justify-around items-center border-t border-t-gray-300 dark:border-t-gray-700 py-2.5 mt-2'>
             <button className='flex items-center gap-2 px-4 py-2 rounded-md cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200'>
-                <Heart size={24} weight="regular" className='text-gray-600 dark:text-gray-300' />
+                <HeartIcon size={24} weight="regular" className='text-gray-600 dark:text-gray-300' />
             </button>
             <button className='flex items-center gap-2 px-4 py-2 rounded-md cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200'>
-                <ChatCircle size={24} weight="regular" className='text-gray-600 dark:text-gray-300' />
+                <ChatCircleIcon size={24} weight="regular" className='text-gray-600 dark:text-gray-300' />
             </button>
             <button className='flex items-center gap-2 px-4 py-2 rounded-md cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200'>
-                <ShareNetwork size={24} weight="regular" className='text-gray-600 dark:text-gray-300' />
+                <ShareNetworkIcon size={24} weight="regular" className='text-gray-600 dark:text-gray-300' />
             </button>
         </div>
       

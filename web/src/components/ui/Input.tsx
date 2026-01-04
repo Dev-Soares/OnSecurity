@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Eye, EyeSlash } from '@phosphor-icons/react'
+import { EyeIcon, EyeSlashIcon } from '@phosphor-icons/react'
 
 type InputProps = {
     value?: string;
@@ -30,7 +30,7 @@ const Input: React.FC<InputProps> = ({ value, onChange, placeholder, type = "tex
         onClick={() => setShowPassword((prev) => !prev)}
         tabIndex={-1}
         >
-            {showPassword ? <EyeSlash size={24} weight="regular" className="text-blue-500 dark:text-white" /> : <Eye size={24} weight="regular" className="text-blue-500 dark:text-white cursor-pointer" />}
+            {showPassword ? <EyeSlashIcon size={24} weight="regular" className="text-blue-500 dark:text-white" /> : <EyeIcon size={24} weight="regular" className="text-blue-500 dark:text-white cursor-pointer" />}
         </button>
         )
      }
