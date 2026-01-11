@@ -18,13 +18,13 @@ const CommunityContent: React.FC = () => {
             <input 
               type="text" 
               readOnly 
-              className='w-full h-12 bg-white dark:bg-gray-700 rounded-3xl px-4 text-gray-950 dark:text-white border-2 border-gray-300 dark:border-gray-600 pointer-events-none cursor-pointer transition-all duration-300' 
+              className='w-full h-12 bg-white dark:bg-gray-700 rounded-3xl px-4 text-gray-950 dark:text-white border-2 border-gray-300 dark:border-gray-600 pointer-events-none cursor-pointer transition-all duration-500' 
               placeholder="O que você está pensando?" 
             />
           </button>
           <button 
             onClick={() => setIsModalOpen(true)}
-            className='p-3 cursor-pointer rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition-all duration-200 bg-blue-500 dark:bg-blue-600 hover:scale-110 shadow-md'
+            className='p-3 cursor-pointer rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition-all duration-500 bg-blue-500 dark:bg-blue-600 hover:scale-110 shadow-md'
           >
             <ImageIcon size={24} weight="regular" className='text-white' />
           </button>     

@@ -23,8 +23,7 @@ const Sidebar: FunctionComponent = () => {
         <SidebarButton text="Comunidade" route="/community" iconOutline={<UsersIcon size={32} weight="regular" />} iconFilled={<UsersIcon size={32} weight="fill" />} isSelected={location.pathname === '/community'} />
         <SidebarButton text="Artigos" route="/articles" iconOutline={<FileTextIcon size={32} weight="regular" />} iconFilled={<FileTextIcon size={32} weight="fill" />} isSelected={location.pathname === '/articles'} />
         <SidebarButton text="Denúncias" route="/complaint" iconOutline={<FlagIcon size={32} weight="regular" />} iconFilled={<FlagIcon size={32} weight="fill" />} isSelected={location.pathname === '/complaint'} />
-        <SidebarButton text="Sobre Nós" route="/about" iconOutline={<InfoIcon size={32} weight="regular" />} iconFilled={<InfoIcon size={32} weight="fill" />} isSelected={location.pathname === '/about'} />
-                
+        
       </div>
       <ToggleTheme />
       <div className="flex flex-col gap-6 justify-center items-center w-full">

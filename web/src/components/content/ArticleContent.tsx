@@ -16,8 +16,19 @@ const ArticleContent: React.FC = () => {
             bgUrl='teste.jpeg'
             id="teste"
           />
+          <ArticleCard
+            title="Sample Article Title"
+            description="This is a sample article content to demonstrate the ArticleCard component."
+            bgUrl='teste.jpeg'
+            id="teste"
+          />
+          <ArticleCard
+            title="Sample Article Title"
+            description="This is a sample article content to demonstrate the ArticleCard component."
+            bgUrl='teste.jpeg'
+            id="teste"
+          />
         </div>
-
       </div>
 
     </main>

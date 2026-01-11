@@ -17,10 +17,10 @@ const App = () => {
         <Route index element={<Navigate to="community" replace />} />
             <Route path="community" element={<CommunityContent />} />
             <Route path="articles" element={<ArticleContent />} />
+            <Route path="articles/:title" element={<DetailedArticleContent />} />
             <Route path="complaint" element={<ComplaintContent />} />
             <Route path="about" element={<AboutContent />} />
-            <Route path="profile" element={<ProfileContent />} />
-            <Route path="articles/:title" element={<DetailedArticleContent />} />
+            <Route path="profile" element={<ProfileContent />} />           
         </Route>
 
         <Route path="/login" element={ <LoginPage />} />
