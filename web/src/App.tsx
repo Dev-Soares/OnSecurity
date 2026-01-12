@@ -17,7 +17,7 @@ const App = () => {
         <Route index element={<Navigate to="community" replace />} />
             <Route path="community" element={<CommunityContent />} />
             <Route path="articles" element={<ArticleContent />} />
-            <Route path="articles/:title" element={<DetailedArticleContent />} />
+            <Route path="articles/:slug" element={<DetailedArticleContent />} />
             <Route path="complaint" element={<ComplaintContent />} />
             <Route path="profile" element={<ProfileContent />} />           
         </Route>

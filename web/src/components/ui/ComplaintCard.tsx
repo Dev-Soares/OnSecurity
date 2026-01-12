@@ -18,25 +18,21 @@ const ComplaintCard: React.FC<ComplaintCardProps> = ({ title, store, content, li
     aviso: {
       bgColor: 'bg-yellow-600',
       iconColor: 'text-yellow-600',
-      borderColor: 'border-yellow-600 dark:border-yellow-500',
       icon: Warning
     },
     cuidado: {
       bgColor: 'bg-orange-600',
       iconColor: 'text-orange-600',
-      borderColor: 'border-orange-600 dark:border-orange-500',
       icon: Shield
     },
     perigo: {
       bgColor: 'bg-red-600',
       iconColor: 'text-red-600',
-      borderColor: 'border-red-600 dark:border-red-500',
       icon: Fire
     },
     critico: {
       bgColor: 'bg-red-700',
       iconColor: 'text-red-700',
-      borderColor: 'border-red-700 dark:border-red-600',
       icon: Skull
     }
   }
@@ -46,7 +42,7 @@ const ComplaintCard: React.FC<ComplaintCardProps> = ({ title, store, content, li
 
   return (
 
-    <div className={`w-full max-w-80 lg:max-w-100 h-[500px] flex flex-col rounded-xl shadow-lg border ${config.borderColor} overflow-hidden bg-gray-200 dark:bg-gray-900`}>
+    <div className="w-full max-w-80 lg:max-w-100 h-[500px] flex flex-col rounded-xl shadow-xl overflow-hidden bg-gray-100 dark:bg-gray-900 border-2 dark:border-gray-700 border-gray-300">
         <div className={`${config.bgColor} w-full h-[90px] p-4 flex flex-row justify-start items-center gap-4`}>
             <div className='bg-white rounded-lg p-2 flex-shrink-0'>
                 <IconComponent size={24} weight="fill" className={`${config.iconColor} text-2xl`} />

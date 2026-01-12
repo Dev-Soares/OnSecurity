@@ -15,18 +15,21 @@ const ArticleContent: React.FC = () => {
             description="This is a sample article content to demonstrate the ArticleCard component."
             bgUrl='teste.jpeg'
             id="teste"
+            slug='teste-teste'
           />
           <ArticleCard
             title="Sample Article Title"
             description="This is a sample article content to demonstrate the ArticleCard component."
             bgUrl='teste.jpeg'
             id="teste"
+            slug='teste-teste'
           />
           <ArticleCard
             title="Sample Article Title"
             description="This is a sample article content to demonstrate the ArticleCard component."
             bgUrl='teste.jpeg'
             id="teste"
+            slug='teste-teste'
           />
         </div>
       </div>
