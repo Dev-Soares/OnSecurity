@@ -1,246 +1,44 @@
-
-import styled from 'styled-components';
 import { useTheme } from '../../contexts/themeContext';
 
-const ToggleTheme = () => {
+export function ThemeToggle() {
+    
   const { theme, toggleTheme } = useTheme();
   const isDark = theme === 'dark';
+
   return (
-    <StyledWrapper>
-      <label htmlFor="theme" className="theme">
-        <span className="theme__toggle-wrap">
-          <input
-            id="theme"
-            className="theme__toggle"
-            type="checkbox"
-            role="switch"
-            name="theme"
-            checked={isDark}
-            onChange={toggleTheme}
-          />
-          <span className="theme__fill" />
-          <span className="theme__icon">
-            <span className="theme__icon-part" />
-            <span className="theme__icon-part" />
-            <span className="theme__icon-part" />
-            <span className="theme__icon-part" />
-            <span className="theme__icon-part" />
-            <span className="theme__icon-part" />
-            <span className="theme__icon-part" />
-            <span className="theme__icon-part" />
-            <span className="theme__icon-part" />
-          </span>
-        </span>
-      </label>
-    </StyledWrapper>
+    <button
+      onClick={toggleTheme}
+      className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer
+        ${isDark
+          ? "bg-gradient-to-r from-orange-500 to-yellow-400 hover:from-orange-600 hover:to-yellow-500"
+          : "bg-zinc-700 hover:bg-zinc-600"
+        }`}
+      aria-label={isDark ? "Mudar para tema claro" : "Mudar para tema escuro"}
+      type="button"
+    >
+      {/* Sun Icon - visível quando está no modo escuro */}
+      <svg
+        className={`w-8 h-8 transition-all duration-300 fill-white ${
+          isDark ? "opacity-100 rotate-0 scale-100" : "opacity-0 rotate-90 scale-0 absolute"
+        }`}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+      </svg>
+
+      {/* Moon Icon - visível quando está no modo claro */}
+      <svg
+        className={`w-8 h-8 transition-all duration-300 fill-yellow-300 ${
+          !isDark ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-0 absolute"
+        }`}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+      </svg>
+    </button>
   );
 }
 
-const StyledWrapper = styled.div`
-  /* Default */
-  .theme {
-    display: flex;
-    align-items: center;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .theme__fill,
-  .theme__icon {
-    transition: 0.3s;
-  }
-
-  .theme__fill {
-    background-color: var(--bg);
-    display: block;
-    mix-blend-mode: difference;
-    position: fixed;
-    inset: 0;
-    height: 100%;
-    transform: translateX(-100%);
-  }
-
-  .theme__icon,
-  .theme__toggle {
-    z-index: 1;
-  }
-
-  .theme__icon,
-  .theme__icon-part {
-    position: absolute;
-  }
-
-  .theme__icon {
-    display: block;
-    top: 0.5em;
-    left: 0.5em;
-    width: 1.5em;
-    height: 1.5em;
-  }
-
-  .theme__icon-part {
-    border-radius: 50%;
-    box-shadow: 0.4em -0.4em 0 0.5em hsl(0,0%,100%) inset;
-    top: calc(50% - 0.5em);
-    left: calc(50% - 0.5em);
-    width: 1em;
-    height: 1em;
-    transition: box-shadow var(--transDur) ease-in-out,
-  		opacity var(--transDur) ease-in-out,
-  		transform var(--transDur) ease-in-out;
-    transform: scale(0.5);
-  }
-
-  .theme__icon-part ~ .theme__icon-part {
-    background-color: hsl(0,0%,100%);
-    border-radius: 0.05em;
-    top: 50%;
-    left: calc(50% - 0.05em);
-    transform: rotate(0deg) translateY(0.5em);
-    transform-origin: 50% 0;
-    width: 0.1em;
-    height: 0.2em;
-  }
-
-  .theme__icon-part:nth-child(3) {
-    transform: rotate(45deg) translateY(0.45em);
-  }
-
-  .theme__icon-part:nth-child(4) {
-    transform: rotate(90deg) translateY(0.45em);
-  }
-
-  .theme__icon-part:nth-child(5) {
-    transform: rotate(135deg) translateY(0.45em);
-  }
-
-  .theme__icon-part:nth-child(6) {
-    transform: rotate(180deg) translateY(0.45em);
-  }
-
-  .theme__icon-part:nth-child(7) {
-    transform: rotate(225deg) translateY(0.45em);
-  }
-
-  .theme__icon-part:nth-child(8) {
-    transform: rotate(270deg) translateY(0.5em);
-  }
-
-  .theme__icon-part:nth-child(9) {
-    transform: rotate(315deg) translateY(0.5em);
-  }
-
-  .theme__label,
-  .theme__toggle,
-  .theme__toggle-wrap {
-    position: relative;
-  }
-
-  .theme__toggle,
-  .theme__toggle:before {
-    display: block;
-  }
-
-  .theme__toggle {
-    background-color: hsl(48,90%,85%);
-    border-radius: 25% / 50%;
-    box-shadow: 0 0 0 0.125em var(--primaryT);
-    padding: 0.25em;
-    width: 6em;
-    height: 3em;
-    -webkit-appearance: none;
-    appearance: none;
-    transition: background-color var(--transDur) ease-in-out,
-  		box-shadow 0.15s ease-in-out,
-  		transform var(--transDur) ease-in-out;
-  }
-
-  .theme__toggle:before {
-    background-color: hsl(48,90%,55%);
-    border-radius: 50%;
-    content: "";
-    width: 2.5em;
-    height: 2.5em;
-    transition: 0.3s;
-  }
-
-  .theme__toggle:focus {
-    box-shadow: 0 0 0 0.125em var(--primary);
-    outline: transparent;
-  }
-
-  /* Checked */
-  .theme__toggle:checked {
-    background-color: hsl(198,90%,15%);
-  }
-
-  .theme__toggle:checked:before,
-  .theme__toggle:checked ~ .theme__icon {
-    transform: translateX(3em);
-  }
-
-  .theme__toggle:checked:before {
-    background-color: hsl(198,90%,55%);
-  }
-
-  .theme__toggle:checked ~ .theme__fill {
-    transform: translateX(0);
-  }
-
-  .theme__toggle:checked ~ .theme__icon .theme__icon-part:nth-child(1) {
-    box-shadow: 0.2em -0.2em 0 0.2em hsl(0,0%,100%) inset;
-    transform: scale(1);
-    top: 0.2em;
-    left: -0.2em;
-  }
-
-  .theme__toggle:checked ~ .theme__icon .theme__icon-part ~ .theme__icon-part {
-    opacity: 0;
-  }
-
-  .theme__toggle:checked ~ .theme__icon .theme__icon-part:nth-child(2) {
-    transform: rotate(45deg) translateY(0.8em);
-  }
-
-  .theme__toggle:checked ~ .theme__icon .theme__icon-part:nth-child(3) {
-    transform: rotate(90deg) translateY(0.8em);
-  }
-
-  .theme__toggle:checked ~ .theme__icon .theme__icon-part:nth-child(4) {
-    transform: rotate(135deg) translateY(0.8em);
-  }
-
-  .theme__toggle:checked ~ .theme__icon .theme__icon-part:nth-child(5) {
-    transform: rotate(180deg) translateY(0.8em);
-  }
-
-  .theme__toggle:checked ~ .theme__icon .theme__icon-part:nth-child(6) {
-    transform: rotate(225deg) translateY(0.8em);
-  }
-
-  .theme__toggle:checked ~ .theme__icon .theme__icon-part:nth-child(7) {
-    transform: rotate(270deg) translateY(0.8em);
-  }
-
-  .theme__toggle:checked ~ .theme__icon .theme__icon-part:nth-child(8) {
-    transform: rotate(315deg) translateY(0.8em);
-  }
-
-  .theme__toggle:checked ~ .theme__icon .theme__icon-part:nth-child(9) {
-    transform: rotate(360deg) translateY(0.8em);
-  }
-
-  .theme__toggle-wrap {
-    margin: 0 0.75em;
-  }
-
-  @supports selector(:focus-visible) {
-    .theme__toggle:focus {
-      box-shadow: 0 0 0 0.125em var(--primaryT);
-    }
-
-    .theme__toggle:focus-visible {
-      box-shadow: 0 0 0 0.125em var(--primary);
-    }
-  }`;
-
-export default ToggleTheme;
+export default ThemeToggle;
