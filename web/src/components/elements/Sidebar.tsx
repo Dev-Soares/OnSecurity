@@ -25,7 +25,6 @@ const Sidebar: FunctionComponent = () => {
         <SidebarButton text="Denúncias" route="/complaint" iconOutline={<FlagIcon size={32} weight="regular" />} iconFilled={<FlagIcon size={32} weight="fill" />} isSelected={location.pathname === '/complaint'} />
         
       </div>
-      <ToggleTheme />
       <div className="flex flex-col gap-6 justify-center items-center w-full">
         <button onClick={() => navigateTo('/login')}
         className="flex justify-center items-center gap-3 w-full font-semibold  p-3 text-white bg-blue-500 border-blue-500 border-2 hover:bg-white hover:text-blue-500 hover:dark:bg-gray-900 hover:translate-y-[-2px] transition-all duration-300 rounded-4xl text-xl! font-normal cursor-pointer ">
