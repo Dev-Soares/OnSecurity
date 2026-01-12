@@ -64,13 +64,7 @@ const BottomNav: FunctionComponent = () => {
         route="/complaint"
         label="Denúncias"
       />
-      <NavItem
-        icon={active => (
-          <InfoIcon size={28} weight={active ? "fill" : "regular"} className={`${active ? "text-blue-500" : "text-gray-400 dark:text-gray-200"}`} />
-        )}
-        route="/about"
-        label="Sobre "
-      />
+      
     </nav>
   )
 }

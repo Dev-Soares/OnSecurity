@@ -8,20 +8,20 @@ const ProfileInfo: React.FC = () => {
         <>
             <nav className='flex  mt-2 border-b w-full border-gray-200 dark:border-gray-800'>
                 <button
-                    className={`relative px-2 pb-2 w-[33.33%] text-lg font-medium transition-colors duration-200 ${activeTab === 'alerts' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}`}
-                    onClick={() => setActiveTab('alerts')}
+                    className={` cursor-pointer relative px-2 pb-2 w-[33.33%] text-lg lg:text-xl lg:pb-4 font-medium transition-colors duration-200 ${activeTab === 'alerts' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}`}
+                    onClick={() => setActiveTab('posts')}
                 >
                     <span
                         className={`
                       absolute left-0 bottom-0 h-[2px] bg-blue-600 dark:bg-blue-500
                       transition-all duration-300 rounded-t-sm 
-                      ${activeTab === 'alerts' ? 'w-full' : 'w-0'}
+                      ${activeTab === 'posts' ? 'w-full' : 'w-0'}
                     `}
                     />
                     Posts
                 </button>
                 <button
-                    className={`relative px-2 pb-2 w-[33.33%] text-lg font-medium transition-colors duration-200 ${activeTab === 'alerts' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}`}
+                    className={` cursor-pointer relative px-2 pb-2 w-[33.33%] text-lg lg:text-xl lg:pb-4 font-medium transition-colors duration-200 ${activeTab === 'alerts' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}`}
                     onClick={() => setActiveTab('alerts')}
                 >
                     <span
@@ -34,7 +34,7 @@ const ProfileInfo: React.FC = () => {
                     Denúncias
                 </button>
                 <button
-                    className={`relative px-2 pb-2 w-[33.33%] text-lg font-medium transition-colors duration-200 ${activeTab === 'articles' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}`}
+                    className={`cursor-pointer relative px-2 pb-2 w-[33.33%] text-lg lg:text-xl lg:pb-4 font-medium transition-colors duration-200 ${activeTab === 'articles' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}`}
                     onClick={() => setActiveTab('articles')}
                 >
                     <span

@@ -2,10 +2,10 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import MainPage from './pages/MainPage'
 import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SignupPage'
+import CreateComplaintPage from './pages/CreateComplaintPage'
 import CommunityContent from './components/content/CommunityContent'
 import ArticleContent from './components/content/ArticleContent'
 import ComplaintContent from './components/content/ComplaintContent'
-import AboutContent from './components/content/AboutContent'
 import ProfileContent from './components/content/ProfileContent'
 import DetailedArticleContent from './components/content/DetailedArticleContent'
 
@@ -19,12 +19,12 @@ const App = () => {
             <Route path="articles" element={<ArticleContent />} />
             <Route path="articles/:title" element={<DetailedArticleContent />} />
             <Route path="complaint" element={<ComplaintContent />} />
-            <Route path="about" element={<AboutContent />} />
             <Route path="profile" element={<ProfileContent />} />           
         </Route>
 
         <Route path="/login" element={ <LoginPage />} />
         <Route path="/signup" element={ <SignupPage />} />
+        <Route path="/create-complaint" element={ <CreateComplaintPage />} />
 
     </Routes>
   )

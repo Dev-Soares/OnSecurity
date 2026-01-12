@@ -1,12 +1,11 @@
 import React, { createContext, useState } from "react";
 import ArticleContent from "../components/content/ArticleContent";
 import CommunityContent from "../components/content/CommunityContent";
-import AboutContent from "../components/content/AboutContent";
 import ProfileContent from "../components/content/ProfileContent";
 import ComplaintContent from "../components/content/ComplaintContent";
 import { useEffect } from "react";
 
-export type ContentId =  "community" | "articles" | "about" | "profile" | "complaint";
+export type ContentId =  "community" | "articles" | "profile" | "complaint";
 
 type contentContextType = {
   shownContentId: ContentId | null;
@@ -19,7 +18,6 @@ const ContentContext = createContext<contentContextType | null>(null);
 const contentMap: Record<ContentId, React.ReactNode> = {
   community: <CommunityContent />,
   articles: <ArticleContent />,
-  about: <AboutContent />,
   profile: <ProfileContent />,
   complaint: <ComplaintContent />,
 };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Post from '../ui/Post'
 import { ImageIcon } from '@phosphor-icons/react'
-import ModalPublicacao from '../ui/ModalPublicacao'
+import ModalPost from '../ui/ModalPost'
 
 const CommunityContent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,7 +30,7 @@ const CommunityContent: React.FC = () => {
           </button>     
         </div>
       </div>
-      <ModalPublicacao isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <ModalPost isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         <div className='flex flex-col gap-3 justify-center items-center md:gap-5'>
             <Post username='Bernardo Soares' content='O desenvolvimento de novas tecnologias exige criatividade e lógica. Em um mundo cada vez mais conectado, a interface do usuário desempenha um papel fundamental na experiência digital. É necessário testar cores, tipografia e responsividade para garantir que a mensagem chegue de forma clara e eficiente. Este é apenas um texto simulado para preencher espaços vazios no seu projeto de design ou código.' timestamp='16/12/2025' imgUrl='imgTeste.jpg' />
             <Post username='Ana Clara' content='A segurança digital é um tema cada vez mais relevante na sociedade atual. Com o avanço da tecnologia, é fundamental estar atento às práticas de proteção de dados e privacidade online. Utilizar senhas fortes, manter softwares atualizados e evitar clicar em links suspeitos são algumas das medidas essenciais para garantir a segurança na internet.' timestamp='10/11/2025' imgUrl='imgTeste.jpg' />

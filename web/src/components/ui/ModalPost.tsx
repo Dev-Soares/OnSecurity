@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { XIcon, ImageIcon } from '@phosphor-icons/react';
 
-type ModalPublicacaoProps = {
+type ModalPostProps = {
     isOpen: boolean;
     onClose: () => void;
     imgUrl?: string | null;
 };
 
-const ModalPublicacao: React.FC<ModalPublicacaoProps> = ({ isOpen, onClose, imgUrl }) => {
+const ModalPost: React.FC<ModalPostProps> = ({ isOpen, onClose, imgUrl }) => {
 
     const [content, setContent] = useState('');
     const [image, setImage] = useState<string | null>(null);
@@ -15,7 +15,6 @@ const ModalPublicacao: React.FC<ModalPublicacaoProps> = ({ isOpen, onClose, imgU
     if (!isOpen) return null;
 
     const handleSubmit = () => {
-        console.log('Publicando:', { content, image });
         setContent('');
         setImage(null);
         onClose();
@@ -95,4 +94,4 @@ const ModalPublicacao: React.FC<ModalPublicacaoProps> = ({ isOpen, onClose, imgU
     );
 };
 
-export default ModalPublicacao;
+export default ModalPost;
