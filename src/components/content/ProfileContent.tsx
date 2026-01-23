@@ -16,7 +16,7 @@ const ProfileContent: React.FC = () => {
       <div className="w-full relative flex flex-col rounded-b-3xl">
         <ProfileBanner />
         <div className='bg-none h-30 rounded-t-3xl w-full flex flex-col items-start justify-start p-4 sm:p-6 pt-12 sm:pt-16 gap-4 sm:gap-6 md:gap-6 mb-8'>
-            <div className='flex flex-col gap-1 mt-2'>
+            <div className='flex flex-col gap-1 mt-6'>
               <h1 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white'>UserName</h1>
               <p className='text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-300'>@UserName</p>
             </div>
