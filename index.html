@@ -8,6 +8,11 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      const dark = window.matchMedia('(prefers-color-scheme: dark)')
+      document.documentElement.classList.toggle('dark', dark.matches)
+      dark.addEventListener('change', e => document.documentElement.classList.toggle('dark', e.matches))
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
