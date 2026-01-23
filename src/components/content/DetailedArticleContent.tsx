@@ -30,7 +30,7 @@ const DetailedArticleContent: React.FC = () => {
           {bgUrl && <img src={bgUrl} alt={title} className='w-full h-full object-cover' />}
           <button 
             onClick={() => navigate('/articles')}
-            className='absolute top-4 right-4 cursor-pointer bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-800 backdrop-blur-sm text-blue-600 dark:text-blue-400 p-3 rounded-full shadow-lg transition-all hover:scale-110 hover:shadow-xl'
+            className='absolute top-4 right-4 cursor-pointer bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-800 backdrop-blur-sm text-blue-600 dark:text-blue-400 p-3 rounded-full shadow-md transition-all hover:scale-110 hover:shadow-md'
             aria-label='Voltar'
           >
             <ArrowLeftIcon size={24} weight="bold" />

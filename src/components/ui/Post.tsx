@@ -13,7 +13,7 @@ type PostProps = {
 const Post: React.FC<PostProps> = ({ username, content, timestamp, userAvatarUrl, imgUrl }) => {
 
   return (
-    <div className='bg-gray-100 dark:bg-gray-900 dark:border-gray-700 border-2 border-gray-300 h-auto px-6 flex flex-col rounded-md gap-2 w-full pt-8 md:w-[70%] xl:w-[50%] shadow-lg'>
+    <div className='bg-gray-100 dark:bg-gray-900 dark:border-gray-700 border-2 border-gray-300 h-auto px-6 flex flex-col rounded-md gap-2 w-full pt-8 md:w-[70%] xl:w-[50%] shadow-md'>
         <div className='flex flex-row gap-2 justify-start items-center border-t border-t-gray-300 dark:border-t-gray-700 py-4'>
             <div className='rounded-full w-[13%] 2xl:w-[10%] border-2 border-gray-200'>{userAvatarUrl ? <img src={userAvatarUrl} alt="User avatar" className='rounded-full' /> : <img src="avatar.png" alt="Default avatar" className='rounded-full' />}</div>
             <div className='flex flex-col'>

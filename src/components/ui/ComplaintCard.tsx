@@ -42,7 +42,7 @@ const ComplaintCard: React.FC<ComplaintCardProps> = ({ title, store, content, li
 
   return (
 
-    <div className="w-full max-w-80 lg:max-w-100 h-[500px] flex flex-col rounded-xl shadow-xl overflow-hidden bg-gray-100 dark:bg-gray-900 border-2 dark:border-gray-700 border-gray-300">
+    <div className="w-full max-w-80 lg:max-w-100 h-[500px] flex flex-col rounded-xl shadow-md overflow-hidden bg-gray-100 dark:bg-gray-900 border-2 dark:border-gray-700 border-gray-300">
         <div className={`${config.bgColor} w-full h-[90px] p-4 flex flex-row justify-start items-center gap-4`}>
             <div className='bg-white rounded-lg p-2 flex-shrink-0'>
                 <IconComponent size={24} weight="fill" className={`${config.iconColor} text-2xl`} />

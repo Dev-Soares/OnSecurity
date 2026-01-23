@@ -27,7 +27,7 @@ const ModalPost: React.FC<ModalPostProps> = ({ isOpen, onClose, imgUrl }) => {
                 onClick={onClose}
             />
 
-            <div className="relative bg-white dark:bg-gray-900 rounded-lg shadow-xl max-w-lg w-full mx-4 p-6 z-10">
+            <div className="relative bg-white dark:bg-gray-900 rounded-lg shadow-md max-w-lg w-full mx-4 p-6 z-10">
 
                 <div className="flex justify-between items-center mb-4">
                     <div className='w-full flex items-center gap-4'>
