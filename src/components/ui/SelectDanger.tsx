@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { CaretDown, Warning, Shield, Fire, Skull } from '@phosphor-icons/react'
+import { CaretDown, Warning, Shield, Fire } from '@phosphor-icons/react'
 
 type DangerType = 'aviso' | 'cuidado' | 'perigo' | 'critico'
 
@@ -40,7 +40,7 @@ const dangerOptions = [
     
 ]
 
-const SelectDanger: React.FC<SelectDangerProps> = ({ value, onChange, required }) => {
+const SelectDanger: React.FC<SelectDangerProps> = ({ value, onChange }) => {
     const [isOpen, setIsOpen] = useState(false)
     const selectRef = useRef<HTMLDivElement>(null)
 
