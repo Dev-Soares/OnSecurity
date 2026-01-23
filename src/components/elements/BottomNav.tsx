@@ -1,5 +1,5 @@
 import type { FunctionComponent } from "react"
-import { UsersIcon, FileTextIcon, InfoIcon, FlagIcon } from "@phosphor-icons/react"
+import { UsersIcon, FileTextIcon, FlagIcon } from "@phosphor-icons/react"
 import { useNavigate, useLocation } from "react-router-dom"
 
 type NavItemProps = {
@@ -34,8 +34,6 @@ const NavItem: FunctionComponent<NavItemProps> = ({ icon, route, label }) => {
     </button>
   )
 }
-
-const iconClass = "w-7 h-7 transition-colors duration-300";
 
 const BottomNav: FunctionComponent = () => {
   return (
